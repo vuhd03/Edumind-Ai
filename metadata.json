@@ -1,0 +1,7 @@
+{
+  "name": "EduMind AI - Personalized Learning Studio",
+  "description": "An advanced personalized learning platform featuring AI-driven knowledge summarization (mind maps), flashcards, practice exams, Q&A assistant, and educational mini-games.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
