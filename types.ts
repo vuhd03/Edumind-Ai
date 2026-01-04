@@ -18,16 +18,12 @@ export interface Question {
   explanation: string;
 }
 
-export interface GameState {
-  score: number;
-  timeLeft: number;
-  isActive: boolean;
-  currentWord?: string;
-  definition?: string;
-  options?: string[];
+export interface GamePair {
+  term: string;
+  definition: string;
 }
 
-export type AppView = 'dashboard' | 'chat' | 'mindmap' | 'flashcards' | 'exam' | 'game';
+export type AppView = 'dashboard' | 'chat' | 'mindmap' | 'flashcards' | 'exam' | 'game' | 'tools' | 'video' | 'images' | 'extractor' | 'voice-chat';
 
 export interface FileData {
   data: string; // base64
@@ -41,4 +37,14 @@ export interface StudySession {
   content: string;
   file?: FileData;
   date: string;
+  mindMapData?: MindMapNode;
+  flashcards?: Flashcard[];
+  exam?: Question[];
+  extractedExam?: Question[];
+}
+
+export interface ChatMessage {
+  role: 'user' | 'bot';
+  text: string;
+  isThinking?: boolean;
 }
